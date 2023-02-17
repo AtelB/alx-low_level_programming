@@ -4,7 +4,7 @@
  * main - Prints all possible combinations of two-digit numbers,
  * ranging from 0-99, separated by a comma followed by a space.
  *
- * Return; Always 0.
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -24,7 +24,7 @@ putchar((j % 10) + 48);
 if (i != 98 || j != 99)
 {
 putchar(',');
-putchar(',');
+putchar(' ');
 }
 }
 }
