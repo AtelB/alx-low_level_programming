@@ -20,12 +20,3 @@ void print_number(int n)
 	}
 	_putchar(i % 10 + '0');
 }
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Co
