@@ -6,26 +6,25 @@
  *
  * Retutn: address of the node where the loop starts or NULL if there's no loop
  */
-
-listint_t *find_listint_loop(listint_t *head);
+listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *slow, *fast;
+	listint_t *cheetah, *snail;
 
-	slow = head;
-	fast = head;
+	snail = head;
+	cheetah = head;
 	while (head != NULL)
 	{
-		if (slow == fast)
+		if (cheetah == snail)
 		{
 			while (head != NULL)
 			{
-				if (slow == fast)
-					return (slow);
-				slow = slow->next;
-				fast = fast->next;
+				if (snail == cheetah)
+					return (snail);
+				snail = snail->next;
+				cheetah = cheetah->next;
 			}
 		}
-		slow = slow->next;
-		fast = fast->next->;
+		snail = snail->next;
+		cheetah = cheetah->next->;
 	}
 }
