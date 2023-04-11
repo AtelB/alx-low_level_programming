@@ -2,16 +2,16 @@
 
 /**
  * binary_to_uint - converts a binary number to an usigned int
- * @b: binary
+ * @b:pointer to a string carrying a binary number
  *
- * Return: unsigned int
+ * Return: unsigned int or 0 if error is encountered
  */
 unsigned int binary_to_uint(const char *b);
 {
 	int i;
-	unsigned int p;
+	unsigned int num;
 
-	p = 0;
+	num = 0;
 	if (!b)
 		return (0);
 	for (i = 0; b[i] != '\0'; i++)
@@ -21,9 +21,9 @@ unsigned int binary_to_uint(const char *b);
 	}
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		p <<= 1;
+		num <<= 1;
 		if (b[i] == '1')
-			p += 1;
+			num += 1;
 	}
-	return (p);
+	return (num);
 }
