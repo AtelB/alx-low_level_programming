@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_uint - function that converts a binary number
- * to an usigned int
+ * binary_to_uint - converts a binary number to an usigned int
  * @b: binary
  *
  * Return: unsigned int
@@ -10,9 +9,9 @@
 unsigned int binary_to_uint(const char *b);
 {
 	int i;
-	unsigned int ui;
+	unsigned int p;
 
-	ui = 0;
+	p = 0;
 	if (!b)
 		return (0);
 	for (i = 0; b[i] != '\0'; i++)
@@ -22,9 +21,9 @@ unsigned int binary_to_uint(const char *b);
 	}
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		ui <<= 1;
+		p <<= 1;
 		if (b[i] == '1')
-			ui += 1;
+			p += 1;
 	}
-	return (ui);
+	return (p);
 }
