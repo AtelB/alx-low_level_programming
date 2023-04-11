@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * binary_to_unit - function that converts a binary number
+ * binary_to_uint - function that converts a binary number
  * to an usigned int
  * @b: binary
- * unsigned int
  *
  * Return: unsigned int
  */
