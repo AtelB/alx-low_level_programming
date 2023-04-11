@@ -1,6 +1,6 @@
-#ifndef ALX_H
-#define ALX_H
-#include <stdio.h>
+#ifndef _ALX_
+#define _ALX_
+
 unsigned long int _power(unsigned int base, unsigned int pow);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
